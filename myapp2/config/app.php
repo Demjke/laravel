@@ -1,5 +1,6 @@
 <?php
 
+
 return [
 
     /*
@@ -122,5 +123,11 @@ return [
         'driver' => env('APP_MAINTENANCE_DRIVER', 'file'),
         'store' => env('APP_MAINTENANCE_STORE', 'database'),
     ],
+
+    'providers' => [
+        Illuminate\Filesystem\FilesystemServiceProvider::class,
+        Illuminate\View\ViewServiceProvider::class,
+        App\Providers\BladeHelperServiceProvider::class,
+    ]
 
 ];
